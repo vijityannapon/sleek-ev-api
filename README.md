@@ -1,73 +1,81 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Installation Guide for `sleek-ev-api`
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This guide will walk you through the steps required to set up `sleek-ev-api` locally for development purposes.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Prerequisites
 
-## Description
+Before you begin, ensure you have the following software installed on your local machine:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### 1. Node.js
 
-## Installation
+- **Node.js (Version: 18.18.0 or higher)**: `sleek-ev-api` is built on top of the NestJS framework which requires Node.js.
 
-```bash
-$ npm install
-```
+#### Using Direct Install:
 
-## Running the app
+Download and install Node.js directly from [Node.js official website](https://nodejs.org/).
 
-```bash
-# development
-$ npm run start
+#### Using NVM (Node Version Manager):
 
-# watch mode
-$ npm run start:dev
+If you're using multiple Node.js versions on your machine, it's recommended to use `nvm` to manage them.
 
-# production mode
-$ npm run start:prod
-```
+1. **Install NVM**: Follow the installation instructions on the [official nvm GitHub repository](https://github.com/nvm-sh/nvm).
 
-## Test
+2. **Install Specific Node Version with NVM**:
+
+   ```bash
+   nvm install 18.18.0
+   ```
+
+3. **Git**: You'll need Git to clone the repository. If you haven't already, install Git from [Git's official website](https://git-scm.com/).
+
+## Steps
+
+### 1. Clone the Repository
+
+First, you have two options to clone the repository to your local machine:
+
+#### Using SSH:
+
+If you have set up your SSH key with your GitHub account:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+git clone git@github.com:vijityannapon/sleek-ev-api.git
 ```
 
-## Support
+#### Using HTTPS:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+If you haven't set up SSH or prefer using HTTPS:
 
-## Stay in touch
+```bash
+git clone https://github.com/vijityannapon/sleek-ev-api.git
+```
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### 2. Navigate to the Project Directory
 
-## License
+Change to the project directory:
 
-Nest is [MIT licensed](LICENSE).
+```bash
+cd sleek-ev-api
+```
+
+### 3. Install Dependencies
+
+Use npm (or yarn, depending on your preference) to install the project's dependencies:
+
+```bash
+npm install
+```
+
+### 4. Environment Configuration
+
+Copy the `.env.example` file and rename it to `.env`. Update the necessary environment variables as required for your local setup.
+
+### 5. Running the Application
+
+Now, you can run the application in development mode with:
+
+```bash
+npm run start:dev
+```
+
+This will start the NestJS application, and it should be accessible at http://localhost:3000 (or another port if you've configured it differently).
